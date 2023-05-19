@@ -1,32 +1,37 @@
 "use client";
 
-import { ImGithub } from 'react-icons/im';
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import Link from 'next/link';
+import { ImGithub } from "react-icons/im";
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 const user = {
-  name: 'Antonio Paturzo',
-  title: 'Full Stack Developer',
+  name: "Antonio Paturzo",
+  title: "Full Stack Developer",
   imageUrl:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-}
+    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+};
 const navigation = [
-  { name: 'Dashboard', href: '/', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-  { name: 'Reports', href: '#', current: false },
-]
+  { name: "Homepage", href: "#", current: false },
+  { name: "About", href: "#aboutme", current: false },
+  { name: "Projects", href: "#projects", current: false },
+  { name: "Fun Stuff", href: "/funstuff", current: false },
+  { name: "Contact Me", href: "#contactme", current: false },
+];
 const userNavigation = [
-  { name: 'My Profile', href: 'https://github.com/Antonio-Paturzo', target: '_blank', rel: 'noopener' },
-  { name: 'Settings', href: '/admin', target: '_blank' },
-  { name: 'Sign out', href: '#' },
-]
+  {
+    name: "My Profile",
+    href: "https://github.com/Antonio-Paturzo",
+    target: "_blank",
+    rel: "noopener",
+  },
+  { name: "Settings", href: "/admin", target: "_blank" },
+  { name: "Sign out", href: "#" },
+];
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Header() {
@@ -54,11 +59,11 @@ export default function Header() {
                             href={item.href}
                             className={classNames(
                               item.current
-                                ? 'bg-gray-900 text-white'
-                                : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                              'rounded-md px-3 py-2 text-sm font-medium'
+                                ? "bg-gray-900 text-white"
+                                : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                              "rounded-md px-3 py-2 text-sm font-medium"
                             )}
-                            aria-current={item.current ? 'page' : undefined}
+                            aria-current={item.current ? "page" : undefined}
                           >
                             {item.name}
                           </Link>
@@ -73,7 +78,13 @@ export default function Header() {
                         className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                       >
                         <span className="sr-only">View My Github</span>
-                        <Link href="https://github.com/Antonio-Paturzo" rel="noopener" target="_blank"><ImGithub className="h-6 w-6" aria-hidden="true" /></Link>
+                        <Link
+                          href="https://github.com/Antonio-Paturzo"
+                          rel="noopener"
+                          target="_blank"
+                        >
+                          <ImGithub className="h-6 w-6" aria-hidden="true" />
+                        </Link>
                       </button>
 
                       {/* Profile dropdown */}
@@ -81,7 +92,11 @@ export default function Header() {
                         <div>
                           <Menu.Button className="flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span className="sr-only">Open My Menu</span>
-                            <img className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />
+                            <img
+                              className="h-8 w-8 rounded-full"
+                              src={user.imageUrl}
+                              alt=""
+                            />
                           </Menu.Button>
                         </div>
                         <Transition
@@ -102,8 +117,8 @@ export default function Header() {
                                     rel={item.rel}
                                     target={item.target}
                                     className={classNames(
-                                      active ? 'bg-gray-100' : '',
-                                      'block px-4 py-2 text-sm text-gray-700'
+                                      active ? "bg-gray-100" : "",
+                                      "block px-4 py-2 text-sm text-gray-700"
                                     )}
                                   >
                                     {item.name}
@@ -121,9 +136,15 @@ export default function Header() {
                     <Disclosure.Button className="inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open main menu</span>
                       {open ? (
-                        <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                        <XMarkIcon
+                          className="block h-6 w-6"
+                          aria-hidden="true"
+                        />
                       ) : (
-                        <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                        <Bars3Icon
+                          className="block h-6 w-6"
+                          aria-hidden="true"
+                        />
                       )}
                     </Disclosure.Button>
                   </div>
@@ -138,10 +159,12 @@ export default function Header() {
                       as="a"
                       href={item.href}
                       className={classNames(
-                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                        'block rounded-md px-3 py-2 text-base font-medium'
+                        item.current
+                          ? "bg-gray-900 text-white"
+                          : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                        "block rounded-md px-3 py-2 text-base font-medium"
                       )}
-                      aria-current={item.current ? 'page' : undefined}
+                      aria-current={item.current ? "page" : undefined}
                     >
                       {item.name}
                     </Disclosure.Button>
@@ -150,18 +173,32 @@ export default function Header() {
                 <div className="border-t border-gray-700 pb-3 pt-4">
                   <div className="flex items-center px-5">
                     <div className="flex-shrink-0">
-                      <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
+                      <img
+                        className="h-10 w-10 rounded-full"
+                        src={user.imageUrl}
+                        alt=""
+                      />
                     </div>
                     <div className="ml-3">
-                      <div className="text-base font-medium leading-none text-white">{user.name}</div>
-                      <div className="text-sm font-medium leading-none text-gray-400">{user.title}</div>
+                      <div className="text-base font-medium leading-none text-white">
+                        {user.name}
+                      </div>
+                      <div className="text-sm font-medium leading-none text-gray-400">
+                        {user.title}
+                      </div>
                     </div>
                     <button
                       type="button"
                       className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                     >
                       <span className="sr-only">View My Github</span>
-                      <Link href="https://github.com/Antonio-Paturzo" rel="noopener" target="_blank"><ImGithub className="h-6 w-6" aria-hidden="true" /></Link>
+                      <Link
+                        href="https://github.com/Antonio-Paturzo"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        <ImGithub className="h-6 w-6" aria-hidden="true" />
+                      </Link>
                     </button>
                   </div>
                   <div className="mt-3 space-y-1 px-2">
@@ -170,6 +207,8 @@ export default function Header() {
                         key={item.name}
                         as="a"
                         href={item.href}
+                        rel={item.rel}
+                        target={item.target}
                         className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                       >
                         {item.name}
@@ -182,6 +221,6 @@ export default function Header() {
           )}
         </Disclosure>
       </div>
-      </>
-  )
+    </>
+  );
 }
