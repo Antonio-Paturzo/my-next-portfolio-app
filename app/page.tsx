@@ -1,52 +1,57 @@
 import Link from "next/link";
 import { getProjects } from "@/sanity/sanity-utils";
+import Contact from "./components/Contact";
 import MainContent from "./components/MainContent";
 import MainPageContent from "./components/MainPageContent";
 import Header from "./components/Header";
+import Features from "./components/Features";
+import Footer from "./components/Footer";
+import Image from "next/image";
+
+const products = [
+  {
+    id: 1,
+    name: "Earthen Bottle",
+    href: "#",
+    price: "$48",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg",
+    imageAlt:
+      "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
+  },
+  {
+    id: 2,
+    name: "Nomad Tumbler",
+    href: "#",
+    price: "$35",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg",
+    imageAlt:
+      "Olive drab green insulated bottle with flared screw lid and flat top.",
+  },
+  {
+    id: 3,
+    name: "Focus Paper Refill",
+    href: "#",
+    price: "$89",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg",
+    imageAlt:
+      "Person using a pen to cross a task off a productivity paper card.",
+  },
+  {
+    id: 4,
+    name: "Machined Mechanical Pencil",
+    href: "#",
+    price: "$35",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg",
+    imageAlt:
+      "Hand holding black machined steel mechanical pencil with brass tip and top.",
+  },
+];
 
 export default async function Home() {
-  const products = [
-    {
-      id: 1,
-      name: "Earthen Bottle",
-      href: "#",
-      price: "$48",
-      imageSrc:
-        "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg",
-      imageAlt:
-        "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
-    },
-    {
-      id: 2,
-      name: "Nomad Tumbler",
-      href: "#",
-      price: "$35",
-      imageSrc:
-        "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg",
-      imageAlt:
-        "Olive drab green insulated bottle with flared screw lid and flat top.",
-    },
-    {
-      id: 3,
-      name: "Focus Paper Refill",
-      href: "#",
-      price: "$89",
-      imageSrc:
-        "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg",
-      imageAlt:
-        "Person using a pen to cross a task off a productivity paper card.",
-    },
-    {
-      id: 4,
-      name: "Machined Mechanical Pencil",
-      href: "#",
-      price: "$35",
-      imageSrc:
-        "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg",
-      imageAlt:
-        "Hand holding black machined steel mechanical pencil with brass tip and top.",
-    },
-  ];
   const projects = await getProjects();
   return (
     <div>
@@ -94,7 +99,10 @@ export default async function Home() {
             </div>
           </div>
         </div>
+        <Features />
+        <Contact />
       </main>
+      <Footer />
     </div>
   );
 }
