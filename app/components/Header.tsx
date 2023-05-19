@@ -32,7 +32,7 @@ function classNames(...classes: string[]) {
 export default function Header() {
   return (
     <>
-      <div className="min-h-full sticky top-0 z-50">
+      <div className="sticky top-0 z-50">
         <Disclosure as="nav" className="bg-gray-800">
           {({ open }) => (
             <>
@@ -181,14 +181,6 @@ export default function Header() {
             </>
           )}
         </Disclosure>
-
-        {/* <header className="bg-primary-dark shadow">
-          <MainContent />
-        </header>
-        <main>
-          <MainPageContent />
-          <RenProjects />
-        </main> */}
       </div>
       </>
   )
