@@ -4,21 +4,26 @@ import { ImGithub } from 'react-icons/im';
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { getAboutMe } from '@/sanity/sanity-utils';
+import Link from 'next/link';
+import MainContent from './MainContent';
+import MainPageContent from './MainPageContent';
+import RenProjects from './RenProjects';
 
 const user = {
   imageUrl:
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 }
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
+  { name: 'Dashboard', href: '/', current: true },
   { name: 'Team', href: '#', current: false },
   { name: 'Projects', href: '#', current: false },
   { name: 'Calendar', href: '#', current: false },
   { name: 'Reports', href: '#', current: false },
 ]
 const userNavigation = [
-  { name: 'Your Profile', href: '#' },
-  { name: 'Settings', href: '#' },
+  { name: 'My Profile', href: 'https://github.com/Antonio-Paturzo', target: '_blank', rel: 'noopener' },
+  { name: 'Settings', href: '/admin', target: '_blank' },
   { name: 'Sign out', href: '#' },
 ]
 
@@ -26,7 +31,8 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default async function Header() {
+  const about = await getAboutMe();
   return (
     <>
       <div className="min-h-full">
@@ -46,7 +52,7 @@ export default function Example() {
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
                         {navigation.map((item) => (
-                          <a
+                          <Link
                             key={item.name}
                             href={item.href}
                             className={classNames(
@@ -58,7 +64,7 @@ export default function Example() {
                             aria-current={item.current ? 'page' : undefined}
                           >
                             {item.name}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -70,7 +76,7 @@ export default function Example() {
                         className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                       >
                         <span className="sr-only">View My Github</span>
-                        <ImGithub className="h-6 w-6" aria-hidden="true" />
+                        <Link href="https://github.com/Antonio-Paturzo" rel="noopener" target="_blank"><ImGithub className="h-6 w-6" aria-hidden="true" /></Link>
                       </button>
 
                       {/* Profile dropdown */}
@@ -94,15 +100,17 @@ export default function Example() {
                             {userNavigation.map((item) => (
                               <Menu.Item key={item.name}>
                                 {({ active }) => (
-                                  <a
+                                  <Link
                                     href={item.href}
+                                    rel={item.rel}
+                                    target={item.target}
                                     className={classNames(
                                       active ? 'bg-gray-100' : '',
                                       'block px-4 py-2 text-sm text-gray-700'
                                     )}
                                   >
                                     {item.name}
-                                  </a>
+                                  </Link>
                                 )}
                               </Menu.Item>
                             ))}
@@ -148,15 +156,15 @@ export default function Example() {
                       <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
                     </div>
                     <div className="ml-3">
-                      <div className="text-base font-medium leading-none text-white"></div>
-                      <div className="text-sm font-medium leading-none text-gray-400"></div>
+                      <div className="text-base font-medium leading-none text-white">{about[0].name}</div>
+                      <div className="text-sm font-medium leading-none text-gray-400">{about[0].title}</div>
                     </div>
                     <button
                       type="button"
                       className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                     >
                       <span className="sr-only">View My Github</span>
-                      <ImGithub className="h-6 w-6" aria-hidden="true" />
+                      <Link href="https://github.com/Antonio-Paturzo" rel="noopener" target="_blank"><ImGithub className="h-6 w-6" aria-hidden="true" /></Link>
                     </button>
                   </div>
                   <div className="mt-3 space-y-1 px-2">
@@ -177,13 +185,12 @@ export default function Example() {
           )}
         </Disclosure>
 
-        <header className="bg-white shadow">
-          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">My Home</h1>
-          </div>
+        <header className="bg-primary-dark shadow">
+          <MainContent />
         </header>
         <main>
-          <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">{/* Your content */}</div>
+          <MainPageContent />
+          <RenProjects />
         </main>
       </div>
       </>

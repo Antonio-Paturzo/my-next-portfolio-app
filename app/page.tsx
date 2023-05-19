@@ -1,7 +1,7 @@
-import Header from './components/Header'
+import RenHeader from './components/RenHeader'
 
 export default function Home() {
   return (
-      <Header />
+      <RenHeader />
   )
 }

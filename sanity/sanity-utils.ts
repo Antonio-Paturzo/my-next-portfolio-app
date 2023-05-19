@@ -4,9 +4,9 @@ import { createClient, groq } from "next-sanity";
 
 export async function getProjects(): Promise<Project[]> {
   const client = createClient({
-    projectId: 'fu9kj3sf',
+    projectId: 'a9f08560',
     dataset: 'production',
-    apiVersion: '2023-05-01',
+    apiVersion: '2023-05-17',
   });
 
   return client.fetch(
@@ -25,9 +25,9 @@ export async function getProjects(): Promise<Project[]> {
 
 export async function getAboutMe(): Promise<AboutMe[]> {
   const client = createClient({
-    projectId: 'fu9kj3sf',
+    projectId: 'a9f08560',
     dataset: 'production',
-    apiVersion: '2023-05-01',
+    apiVersion: '2023-05-17',
   })
 
   return client.fetch(
