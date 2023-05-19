@@ -32,7 +32,7 @@ function classNames(...classes: string[]) {
 export default function Header() {
   return (
     <>
-      <div className="min-h-full">
+      <div className="min-h-full sticky top-0 z-50">
         <Disclosure as="nav" className="bg-gray-800">
           {({ open }) => (
             <>
