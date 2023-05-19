@@ -4,13 +4,11 @@ import { ImGithub } from 'react-icons/im';
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { getAboutMe } from '@/sanity/sanity-utils';
 import Link from 'next/link';
-import MainContent from './MainContent';
-import MainPageContent from './MainPageContent';
-import RenProjects from './RenProjects';
 
 const user = {
+  name: 'Antonio Paturzo',
+  title: 'Full Stack Developer',
   imageUrl:
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 }
@@ -31,8 +29,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default async function Header() {
-  const about = await getAboutMe();
+export default function Header() {
   return (
     <>
       <div className="min-h-full">
@@ -45,7 +42,7 @@ export default async function Header() {
                     <div className="flex-shrink-0">
                       <img
                         className="h-8 w-8"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                         alt="Your Company"
                       />
                     </div>
@@ -156,8 +153,8 @@ export default async function Header() {
                       <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
                     </div>
                     <div className="ml-3">
-                      <div className="text-base font-medium leading-none text-white">{about[0].name}</div>
-                      <div className="text-sm font-medium leading-none text-gray-400">{about[0].title}</div>
+                      <div className="text-base font-medium leading-none text-white">{user.name}</div>
+                      <div className="text-sm font-medium leading-none text-gray-400">{user.title}</div>
                     </div>
                     <button
                       type="button"
@@ -185,13 +182,13 @@ export default async function Header() {
           )}
         </Disclosure>
 
-        <header className="bg-primary-dark shadow">
+        {/* <header className="bg-primary-dark shadow">
           <MainContent />
         </header>
         <main>
           <MainPageContent />
           <RenProjects />
-        </main>
+        </main> */}
       </div>
       </>
   )
