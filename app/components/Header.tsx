@@ -31,7 +31,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default async function Header(): Promise<JSX.Element> {
+export default async function Header() {
   const about = await getAboutMe();
   return (
     <>
