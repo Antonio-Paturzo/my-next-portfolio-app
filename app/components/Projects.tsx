@@ -1,4 +1,3 @@
-import { getProjects } from "@/sanity/sanity-utils";
 import Link from "next/link";
 
 const products = [
@@ -45,12 +44,15 @@ const products = [
   // More products...
 ];
 
-export default async function Projects() {
-  const projects = await getProjects();
+export default function Projects({ projects }: { projects: any[] }) {
   return (
     <div className="bg-primary-dark">
+      <h2 className="font-extrabold text-5xl tracking-tight text-amber-600 center text-center">
+        Projects
+      </h2>
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 className="sr-only">Projects</h2>
+
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {products.map((product) => (
             <a key={product.id} href={product.href} className="group">
