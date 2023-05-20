@@ -11,8 +11,6 @@ export const metadata = {
   description: "Antonio's Fullstack Developer Portfolio Homepage",
   keywords:
     "Antonio, Fullstack, Developer, Portfolio, Homepage, Next.js, TailwindCSS, TypeScript, React, Vercel, Server Components, Server Component,",
-  url: "https://antoniopaturzo.me",
-  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({
