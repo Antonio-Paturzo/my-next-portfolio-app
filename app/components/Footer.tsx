@@ -2,7 +2,6 @@ import { ImGithub } from "react-icons/im";
 import { SiVercel } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { BsStackOverflow, BsLinkedin } from "react-icons/bs";
-import Image from "next/image";
 
 const Footer = () => {
   return (

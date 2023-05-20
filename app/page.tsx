@@ -6,7 +6,6 @@ import MainPageContent from "./components/MainPageContent";
 import Header from "./components/Header";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
-import Image from "next/image";
 
 const products = [
   {

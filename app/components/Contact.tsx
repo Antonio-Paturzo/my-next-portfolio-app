@@ -2,7 +2,7 @@
 
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Lottie from "lottie-react";
-import GithubData from "@/public/ric46Mm3WM.json";
+import GithubData from "./assets/ric46Mm3WM.json";
 
 export default function Contact() {
   return (
