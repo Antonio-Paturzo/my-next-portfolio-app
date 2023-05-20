@@ -11,6 +11,8 @@ export const metadata = {
   description: "Antonio's Fullstack Developer Portfolio Homepage",
   keywords:
     "Antonio, Fullstack, Developer, Portfolio, Homepage, Next.js, TailwindCSS, TypeScript, React, Vercel, Server Components, Server Component,",
+  url: "https://antoniopaturzo.me",
+  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({
@@ -19,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className="h-full bg-gray-100" lang="en">
+    <html className="h-full bg-primary-dark" lang="en">
       <body className={comfortaa.className}>{children}</body>
     </html>
   );
