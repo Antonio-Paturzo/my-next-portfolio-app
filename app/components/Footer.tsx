@@ -38,7 +38,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/funstuff"
+                  href="#"
                   className="text-amber-600 mr-4 hover:underline md:mr-6 "
                 >
                   Fun Stuff
@@ -80,21 +80,21 @@ const Footer = () => {
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
               >
                 <BsLinkedin className="w-5 h-5" aria-hidden="true" />
-                <span className="sr-only">Twitter page</span>
+                <span className="sr-only">My Linkedin Page</span>
               </a>
               <a
                 href="#"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
               >
                 <TbBrandNextjs className="w-5 h-5" aria-hidden="true" />
-                <span className="sr-only">GitHub account</span>
+                <span className="sr-only">Created with Next.Js</span>
               </a>
               <a
                 href="#"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
               >
                 <SiVercel className="w-5 h-5" aria-hidden="true" />
-                <span className="sr-only">Dribbble account</span>
+                <span className="sr-only">Deployed with Vercel</span>
               </a>
             </div>
           </div>
