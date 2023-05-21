@@ -1,6 +1,8 @@
 # My Portfolio Project Journey
 
-![GitHub deployments](https://img.shields.io/github/deployments/Antonio-Paturzo/my-next-portfolio-app/production?label=Deploy%20Status&logo=Vercel&style=plastic)
+![GitHub deployments](https://img.shields.io/github/deployments/Antonio-Paturzo/my-next-portfolio-app/production?label=Deploy%20Status&logo=Vercel&style=plastic) 
+
+[View My Website](https://www.antoniopaturzo.me)
 
 ## Introduction
 
