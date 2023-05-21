@@ -13,10 +13,10 @@ const user = {
   imageUrl: "/ezgif.com-gif-to-webp.webp",
 };
 const navigation = [
-  { name: "Homepage", href: "#", current: false },
+  { name: "Homepage", href: "#top", current: false },
   { name: "About", href: "#aboutme", current: false },
   { name: "Projects", href: "#projects", current: false },
-  { name: "Fun Stuff", href: "#", current: false },
+  { name: "Fun Stuff", href: "#top", current: false },
   { name: "Contact Me", href: "#contactme", current: false },
 ];
 const userNavigation = [
@@ -27,7 +27,7 @@ const userNavigation = [
     rel: "noopener",
   },
   { name: "Settings", href: "/admin", target: "_blank" },
-  { name: "Sign out", href: "#" },
+  { name: "Sign out", href: "#top" },
 ];
 
 function classNames(...classes: string[]) {
