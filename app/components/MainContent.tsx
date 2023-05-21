@@ -11,9 +11,9 @@ export default function MainContent() {
               </span>
             </h1>
             <p className="mt-4 text-xl text-ternary-light">
-              I am a Fullstack Developer, blending creativity and technical
-              expertise to craft extraordinary digital experiences that
-              captivate users and push boundaries.
+              <strong>Well hello there!</strong> I am a Fullstack Developer,
+              blending creativity and technical expertise to craft extraordinary
+              digital experiences that captivate users and push boundaries.
             </p>
           </div>
           <div>
