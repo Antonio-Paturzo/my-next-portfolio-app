@@ -5,7 +5,10 @@ export default function MainContent() {
         <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
           <div className="sm:max-w-lg">
             <h1 className="font text-4xl font-bold tracking-tight text-quaternary-light sm:text-6xl">
-              Antonio Paturzo
+              Antonio{" "}
+              <span className="from-quaternary-light via-amber-600 to-violet-600 bg-clip-text text-transparent bg-gradient-to-r">
+                Paturzo
+              </span>
             </h1>
             <p className="mt-4 text-xl text-ternary-light">
               I am a Fullstack Developer, blending creativity and technical

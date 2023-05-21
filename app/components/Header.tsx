@@ -5,12 +5,12 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import Image from "next/image";
 
 const user = {
   name: "Antonio Paturzo",
   title: "Full Stack Developer",
-  imageUrl:
-    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+  imageUrl: "/ezgif.com-gif-to-webp.webp",
 };
 const navigation = [
   { name: "Homepage", href: "#", current: false },
@@ -45,10 +45,13 @@ export default function Header() {
                 <div className="flex h-16 items-center justify-between">
                   <div className="flex items-center">
                     <div className="flex-shrink-0">
-                      <img
+                      <Image
                         className="h-8 w-8"
                         src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                         alt="Your Company"
+                        height={32}
+                        width={32}
+                        loading="lazy"
                       />
                     </div>
                     <div className="hidden md:block">
@@ -92,10 +95,13 @@ export default function Header() {
                         <div>
                           <Menu.Button className="flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span className="sr-only">Open My Menu</span>
-                            <img
-                              className="h-8 w-8 rounded-full"
-                              src={user.imageUrl}
-                              alt=""
+                            <Image
+                              className="rounded-full h-8 w-8"
+                              src="/ezgif.com-gif-to-webp.webp"
+                              alt="My profile image"
+                              height={32}
+                              width={32}
+                              loading="lazy"
                             />
                           </Menu.Button>
                         </div>
@@ -173,10 +179,13 @@ export default function Header() {
                 <div className="border-t border-gray-700 pb-3 pt-4">
                   <div className="flex items-center px-5">
                     <div className="flex-shrink-0">
-                      <img
+                      <Image
                         className="h-10 w-10 rounded-full"
-                        src={user.imageUrl}
-                        alt=""
+                        src="/ezgif.com-gif-to-webp.webp"
+                        alt="My profile image"
+                        height={40}
+                        width={40}
+                        loading="lazy"
                       />
                     </div>
                     <div className="ml-3">
