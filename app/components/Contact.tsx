@@ -22,9 +22,10 @@ export default function Contact() {
       <Lottie
         className="max-w-sm mx-auto max-h-96 my-auto"
         animationData={GithubData}
+        id="contactme"
       />
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-amber-600 sm:text-4xl">
+        <h2 className="text-3xl font-bold tracking-tight text-quaternary-light sm:text-4xl">
           Contact Me
         </h2>
         <p className="mt-2 text-lg leading-8 text-indigo-500">
@@ -33,7 +34,7 @@ export default function Contact() {
         </p>
       </div>
       <form
-        action="#"
+        action="https://formspree.io/f/xvonnozl"
         method="POST"
         className="mx-auto mt-16 max-w-xl sm:mt-20"
       >
@@ -41,7 +42,7 @@ export default function Contact() {
           <div>
             <label
               htmlFor="first-name"
-              className="block text-sm font-semibold leading-6 text-amber-600"
+              className="block text-sm font-semibold leading-6 text-quaternary-light"
             >
               First name
             </label>
@@ -60,7 +61,7 @@ export default function Contact() {
           <div>
             <label
               htmlFor="last-name"
-              className="block text-sm font-semibold leading-6 text-amber-600"
+              className="block text-sm font-semibold leading-6 text-quaternary-light"
             >
               Last name
             </label>
@@ -79,7 +80,7 @@ export default function Contact() {
           <div className="sm:col-span-2">
             <label
               htmlFor="subject"
-              className="block text-sm font-semibold leading-6 text-amber-600"
+              className="block text-sm font-semibold leading-6 text-quaternary-light"
             >
               Subject
             </label>
@@ -98,7 +99,7 @@ export default function Contact() {
           <div className="sm:col-span-2">
             <label
               htmlFor="email"
-              className="block text-sm font-semibold leading-6 text-amber-600"
+              className="block text-sm font-semibold leading-6 text-quaternary-light"
             >
               Email
             </label>
@@ -117,7 +118,7 @@ export default function Contact() {
           <div className="sm:col-span-2">
             <label
               htmlFor="phone-number"
-              className="block text-sm font-semibold leading-6 text-amber-600"
+              className="block text-sm font-semibold leading-6 text-quaternary-light"
             >
               Phone number
             </label>
@@ -154,7 +155,7 @@ export default function Contact() {
           <div className="sm:col-span-2">
             <label
               htmlFor="message"
-              className="block text-sm font-semibold leading-6 text-amber-600"
+              className="block text-sm font-semibold leading-6 text-quaternary-light"
             >
               Message
             </label>
