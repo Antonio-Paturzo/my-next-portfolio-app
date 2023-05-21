@@ -4,7 +4,7 @@ export default function MainContent() {
       <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
         <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
           <div className="sm:max-w-lg">
-            <h1 className="font text-4xl font-bold tracking-tight text-amber-600 sm:text-6xl">
+            <h1 className="font text-4xl font-bold tracking-tight text-quaternary-light sm:text-6xl">
               Antonio Paturzo
             </h1>
             <p className="mt-4 text-xl text-ternary-light">
@@ -83,9 +83,9 @@ export default function MainContent() {
 
               <a
                 href="/#link1"
-                className="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700"
+                className="inline-block rounded-md border border-transparent bg-ternary-dark px-8 py-3 text-center font-bold text-slate-700 hover:bg-primary-light"
               >
-                Learn More
+                <strong>Learn More</strong>
               </a>
             </div>
           </div>

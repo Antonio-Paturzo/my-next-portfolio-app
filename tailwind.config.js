@@ -15,14 +15,15 @@ module.exports = {
       },
       colors: {
         // Light colors
-        "primary-light": "#F7F8FC",
-        "secondary-light": "#FFFFFF",
-        "ternary-light": "#f6f7f8",
+        "primary-light": "#42B8B8",
+        "secondary-light": "#83C1C1",
+        "ternary-light": "#2D4263",
+        "quaternary-light": "#C84B31",
 
         // Dark colors
-        "primary-dark": "#0D2438",
+        "primary-dark": "#ECDBBA",
         "secondary-dark": "#102D44",
-        "ternary-dark": "#1E3851",
+        "ternary-dark": "#DADADA",
 
         // Extended v3 color
         gray: colors.neutral,

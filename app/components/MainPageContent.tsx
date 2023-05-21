@@ -48,18 +48,27 @@ export default function MainPageContent() {
               <span className="inline-flex text-base items-center rounded-md bg-violet-300 px-2 py-1 font-semibold text-indigo-600 ring-1 ring-inset ring-purple-700/10">
                 Deploy Faster
               </span>
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-amber-600 sm:text-4xl">
-                A better workflow
+              <h1 className="mt-2 text-3xl font-bold tracking-tight text-quaternary-light sm:text-4xl">
+                A little about me
               </h1>
               <p className="mt-6 text-xl leading-8 text-ternary-light">
-                Aliquet nec orci mattis amet quisque ullamcorper neque, nibh
-                sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque
-                id at vitae feugiat egestas.
+                Hi !, I am a tenacious developer who turned passion into
+                profession through sheer grit and relentless pursuit of
+                knowledge. From humble beginnings, I embarked on a
+                transformative journey, honing my skills and mastering the art
+                of coding. Today, armed with expertise and an unwavering
+                commitment to excellence, I am poised to make an indelible
+                impact in the world of technology.
               </p>
             </div>
           </div>
         </div>
         <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+          <div className="py-2">
+            <span className="py-2 inline-flex text-base items-center rounded-md bg-secondary-light px-2 font-bold text-indigo-600 ring-1 ring-inset ring-purple-700/10">
+              <h3>Featured Project</h3>
+            </span>
+          </div>
           <img
             className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
             src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
@@ -84,7 +93,7 @@ export default function MainPageContent() {
                     aria-hidden="true"
                   />
                   <span>
-                    <strong className="font-semibold text-amber-600">
+                    <strong className="font-semibold text-quaternary-light">
                       Push to deploy.
                     </strong>{" "}
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -98,7 +107,7 @@ export default function MainPageContent() {
                     aria-hidden="true"
                   />
                   <span>
-                    <strong className="font-semibold text-amber-600">
+                    <strong className="font-semibold text-quaternary-light">
                       SSL certificates.
                     </strong>{" "}
                     Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
@@ -111,7 +120,7 @@ export default function MainPageContent() {
                     aria-hidden="true"
                   />
                   <span>
-                    <strong className="font-semibold text-amber-600">
+                    <strong className="font-semibold text-quaternary-light">
                       Database backups.
                     </strong>{" "}
                     Ac tincidunt sapien vehicula erat auctor pellentesque
@@ -126,7 +135,7 @@ export default function MainPageContent() {
                 et ultrices hac adipiscing egestas. Iaculis convallis ac tempor
                 et ut. Ac lorem vel integer orci.
               </p>
-              <h2 className="mt-16 text-2xl font-bold tracking-tight text-amber-600">
+              <h2 className="mt-16 text-2xl font-bold tracking-tight text-quaternary-light">
                 No server? No problem.
               </h2>
               <p id="aboutme" className="mt-6">
