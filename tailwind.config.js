@@ -17,8 +17,8 @@ module.exports = {
         // Light colors
         "primary-light": "#42B8B8",
         "secondary-light": "#83C1C1",
-        "ternary-light": "#2D4263",
-        "quaternary-light": "#C84B31",
+        "ternary-light": "#3A4C73",
+        "quaternary-light": "#802C1E",
 
         // Dark colors
         "primary-dark": "#ECDBBA",
