@@ -68,9 +68,7 @@ export default function Projects({ projects }: { projects: any[] }) {
               <h3 className="mt-4 text-sm text-quaternary-light">
                 {product.name}
               </h3>
-              <p className="mt-1 text-lg font-medium text-ternary-light">
-                {product.price}
-              </p>
+              <p className="mt-1 text-lg font-medium text-ternary-light"></p>
             </a>
           ))}
           {projects.map((project) => (
