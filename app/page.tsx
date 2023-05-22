@@ -1,11 +1,11 @@
 import { getProjects } from "@/sanity/sanity-utils";
-import Contact from "./components/Contact";
-import MainContent from "./components/MainContent";
-import MainPageContent from "./components/MainPageContent";
-import Header from "./components/Header";
-import Features from "./components/Features";
-import Footer from "./components/Footer";
-import Projects from "./components/Projects";
+import Contact from "./components/Contact/Contact";
+import MainContent from "./components/Header/MainContent";
+import MainPageContent from "./components/MainPage/MainPageContent";
+import Header from "./components/Nav/Header";
+import Features from "./components/MainPage/Features";
+import Footer from "./components/Footer/Footer";
+import Projects from "./components/MainPage/Projects";
 
 export default async function Home() {
   const projects = await getProjects();
