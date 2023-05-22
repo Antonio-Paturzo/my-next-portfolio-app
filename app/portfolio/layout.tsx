@@ -20,12 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={comfortaa.className}
-        style={{ backgroundColor: "##ECDBBA" }}
-      >
-        {children}
-      </body>
+      <body className={comfortaa.className}>{children}</body>
     </html>
   );
 }
