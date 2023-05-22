@@ -31,7 +31,7 @@ export default function Projects({ projects }: { projects: any[] }) {
       </div>
       <div className="center text-center">
         <a
-          href="#top"
+          href="/portfolio"
           className="mx-auto inline-block center rounded-md border border-transparent bg-ternary-dark px-8 py-3 text-center shadow-md shadow-slate-900 font-bold text-slate-700 hover:bg-primary-light"
         >
           <strong className="text-center center">View More Projects</strong>

@@ -16,7 +16,7 @@ export default async function Home() {
         <MainContent />
       </header>
       <main>
-        <MainPageContent />
+        <MainPageContent projects={projects} />
         <Projects projects={projects} />
         <Features />
         <Contact />

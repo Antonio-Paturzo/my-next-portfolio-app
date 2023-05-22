@@ -4,7 +4,7 @@ import {
   ServerIcon,
 } from "@heroicons/react/20/solid";
 
-export default function MainPageContent() {
+export default function MainPageContent({ projects }: { projects: any[] }) {
   return (
     <div
       id="link1"
@@ -71,8 +71,8 @@ export default function MainPageContent() {
           </div>
           <img
             className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
-            src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
-            alt=""
+            src={projects[1].image}
+            alt="Big Ed's Artisan Bread"
           />
         </div>
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
