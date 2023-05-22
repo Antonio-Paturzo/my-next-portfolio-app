@@ -86,7 +86,7 @@ export default function MainContent() {
 
               <a
                 href="/#link1"
-                className="inline-block rounded-md border border-transparent bg-ternary-dark px-8 py-3 text-center font-bold text-slate-700 hover:bg-primary-light"
+                className="inline-block rounded-md border border-transparent bg-ternary-dark px-8 py-3 text-center font-bold shadow-sm shadow-slate-800 text-slate-700 hover:bg-primary-light"
               >
                 <strong>Learn More</strong>
               </a>
