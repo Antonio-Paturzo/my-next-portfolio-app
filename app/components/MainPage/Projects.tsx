@@ -12,7 +12,11 @@ export default function Projects({ projects }: { projects: any[] }) {
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 xl:gap-x-8">
           {projects.map((project) => (
-            <Link key={project._id} href={"/"} className="group">
+            <Link
+              key={project._id}
+              href={`/portfolio/${project.slug}`}
+              className="group hover:scale-110 transition"
+            >
               <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg shadow-md shadow-neutral-800 bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
                 <Image
                   src={project.image}

@@ -46,3 +46,25 @@ export async function getAboutMe(): Promise<AboutMe[]> {
       }`
   )
 }
+
+export async function getProject(slug: string): Promise<Project> {
+  const client = createClient({
+    projectId: 'a9f08560',
+    dataset: 'production',
+    apiVersion: '2023-05-17',
+  });
+
+  return client.fetch(
+    groq`*[_type == "project" && slug.current == $slug][0] {
+      _id,
+      _createdAt,
+      _updatedAt,
+      name,
+      "projectDescription": projectDescription[0].children[0].text,
+      url,
+      "slug": slug.current,
+      "image": image.asset->url,
+    }`
+  , { slug }
+  )
+}

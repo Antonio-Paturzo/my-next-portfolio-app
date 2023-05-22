@@ -2,6 +2,7 @@ import { getProjects } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Header from "../components/Nav/Header";
 import Footer from "../components/Footer/Footer";
+import Link from "next/link";
 
 export default async function Portfolio() {
   const projects = await getProjects();
@@ -17,13 +18,18 @@ export default async function Portfolio() {
               key={project._id}
               className="bg-white rounded-lg shadow-lg shadow-slate-800 p-6"
             >
-              <Image
-                src={project.image}
-                width={600}
-                height={400}
-                alt={project.name}
-                className="rounded-lg shadow-lg shadow-slate-800"
-              />
+              <Link
+                href={`/portfolio/${project.slug}`}
+                className="hover:scale-105 transition"
+              >
+                <Image
+                  src={project.image}
+                  width={600}
+                  height={400}
+                  alt={project.name}
+                  className="rounded-lg shadow-lg hover:opacity-75 shadow-slate-800"
+                />
+              </Link>
               <h2 className="text-xl font-bold text-quaternary-light mt-4">
                 {project.name}
               </h2>
