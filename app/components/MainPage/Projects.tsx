@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Projects({ projects }: { projects: any[] }) {
   return (
-    <div className="bg-primary-dark">
+    <div className="bg-black">
       <h2 className="font-extrabold text-5xl tracking-tight text-quaternary-light center text-center">
         Projects
       </h2>

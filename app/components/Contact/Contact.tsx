@@ -6,7 +6,7 @@ import GithubData from "../assets/ric46Mm3WM.json";
 
 export default function Contact() {
   return (
-    <div className="isolate bg-primary-dark px-6 py-16 sm:py-16 lg:px-8">
+    <div className="isolate bg-black px-6 py-16 sm:py-16 lg:px-8">
       <div
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
         aria-hidden="true"

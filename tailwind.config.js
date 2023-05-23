@@ -17,13 +17,13 @@ module.exports = {
         // Light colors
         "primary-light": "#42B8B8",
         "secondary-light": "#83C1C1",
-        "ternary-light": "#3A4C73",
-        "quaternary-light": "#802C1E",
+        "ternary-light": "#DADADA",
+        "quaternary-light": "#FF7D65",
 
         // Dark colors
         "primary-dark": "#ECDBBA",
         "secondary-dark": "#102D44",
-        "ternary-dark": "#DADADA",
+        "ternary-dark": "#fcf7f8",
 
         // Extended v3 color
         gray: colors.neutral,

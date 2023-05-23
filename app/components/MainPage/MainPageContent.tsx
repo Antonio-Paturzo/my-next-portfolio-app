@@ -8,7 +8,7 @@ export default function MainPageContent({ projects }: { projects: any[] }) {
   return (
     <div
       id="link1"
-      className="relative isolate overflow-hidden bg-primary-dark px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0"
+      className="relative isolate overflow-hidden bg-black px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0"
     >
       <div className="absolute inset-0 -z-10 overflow-hidden blur-2xl">
         <svg
